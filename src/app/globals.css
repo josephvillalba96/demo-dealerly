@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+/*
+ * Identidad del demo: violeta suave sobre neutros fríos (referencias del cliente).
+ * Escala de radios: tarjetas 16px, controles 10px, chips en píldora.
+ */
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  --color-brand-50: #f4f2fe;
+  --color-brand-100: #ebe7fd;
+  --color-brand-200: #d9d2fb;
+  --color-brand-300: #bfb3f8;
+  --color-brand-500: #6d5bf0;
+  --color-brand-600: #5b49e0;
+  --color-brand-700: #4a3bc2;
+  --color-brand-900: #1d1650;
+
+  --color-ink: #15141c;
+  --color-ink-soft: #3b3a48;
+  --color-muted: #666577;
+  --color-faint: #9b9aab;
+  --color-line: #ececf2;
+  --color-line-strong: #dedee8;
+  --color-surface: #f7f7fa;
+  --color-canvas: #ffffff;
+
+  --color-ok: #0f7a56;
+  --color-ok-bg: #e4f5ee;
+  --color-warn: #965407;
+  --color-warn-bg: #fff2d9;
+  --color-bad: #bf2147;
+  --color-bad-bg: #fde8ed;
+
+  --radius-card: 16px;
+  --radius-control: 10px;
+
+  --shadow-card: 0 1px 2px rgb(29 22 80 / 0.04);
+  --shadow-pop: 0 12px 32px -8px rgb(29 22 80 / 0.18), 0 2px 6px rgb(29 22 80 / 0.06);
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-feature-settings: "cv11", "ss01";
+  -webkit-font-smoothing: antialiased;
+}
+
+.num {
+  font-variant-numeric: tabular-nums;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-brand-500);
+  outline-offset: 2px;
+}
+
+@keyframes shimmer {
+  to {
+    background-position: -200% 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f5 25%, #f8f8fb 50%, #f0f0f5 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.6s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton {
+    animation: none;
+  }
+  * {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
