@@ -1,7 +1,7 @@
-# Uso local: docker compose up --build  ->  http://localhost:3000
+# Uso local: docker compose up --build  ->  http://localhost:3001
 services:
   dealerly-demo:
     build: .
     ports:
-      - "3000:3000"
+      - "3001:3001"
     restart: unless-stopped

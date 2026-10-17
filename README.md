@@ -39,12 +39,12 @@ El proyecto incluye `Dockerfile` (Next.js en modo `standalone`, imagen Alpine co
 Local:
 
 ```bash
-docker compose up --build   # http://localhost:3000
+docker compose up --build   # http://localhost:3001
 ```
 
 En Easypanel:
 
 1. Crea un servicio de tipo **App**.
 2. En **Fuente**, sube el zip o conecta el repositorio, y en **Compilación** elige **Dockerfile** (ruta `Dockerfile`).
-3. En **Dominios y puertos**, el puerto del servicio es **3000**.
+3. En **Dominios y puertos**, el puerto del servicio es **3001**.
 4. No necesita variables de entorno ni volúmenes: los datos del demo viven en el navegador y se reinician con "Reiniciar demo".
